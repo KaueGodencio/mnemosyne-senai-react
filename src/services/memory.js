@@ -1,12 +1,12 @@
-const API_URL = "http://localhost:3001";
+const API_URL = "http://localhost:3000"
 
 const getMemories = async () => {
 
     const response = await fetch(`${API_URL}/memories`);
 
-    const memories = await response.json();
+    const memories = await response.json(); 
 
-    return memories;
+    return memories; 
 
 }
 
@@ -32,6 +32,24 @@ const createMemory = async (memory) => {
     return response.json(); // Retorna a resposta da API convertida para JSON
 }
 
+const getMemoryById = async (id) => {
+
+    const response = await fetch(`${API_URL}/memories/${id}`);
+    const memories = await response.json();
+    return memories;
+
+
+}
+
+const deleteMemory = async (id) => {
+    const response = await fetch (`${API_URL}/memories/${id}`, {
+    method: "DELETE"
+});
+
+return response.json();
+}
+
+
 // Função para converter uma imagem em Base64
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
@@ -42,7 +60,4 @@ function imageToBase64(file) {
     });
 }
 
-
-
-export default { getMemories, createMemory };
-
+export default { getMemories, createMemory, getMemoryById, deleteMemory }; 

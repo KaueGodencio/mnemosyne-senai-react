@@ -39,7 +39,7 @@ const Home = () => {
 
                     {memories.map((memory, index) => (
 
-                        <a  key={index} href={`/memory?id${memory.id}`}>
+                        <a  key={index} href={`/memory?id=${memory.id}`}>
 
                             <div  className="memory-card">
 

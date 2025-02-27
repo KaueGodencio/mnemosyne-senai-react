@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "../../components/header";
 import memory from "../../services/memory";
+import "./new-memory.css";
+
 
 const NewMemory = () => {
 
