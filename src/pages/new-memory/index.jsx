@@ -8,7 +8,7 @@ const NewMemory = () => {
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [userFeedback,setUserFeedBack] = useState ("");
+    const [userFeedback, setUserFeedBack] = useState("");
     const [images, setImages] = useState([]);
     const [imageURLs, setImageURLs] = useState([]);
 
@@ -30,6 +30,9 @@ const NewMemory = () => {
             imageURLs.push(thumbnail); // Acrescenta na lista.
 
         }
+
+        document.title="Tela de detalhes";
+
 
 
     }
@@ -106,5 +109,6 @@ const NewMemory = () => {
     );
 
 };
+
 
 export default NewMemory;
