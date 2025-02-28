@@ -91,8 +91,9 @@ const NewMemory = () => {
                         <span className="no-images">Nenhuma imagem no momento.</span>
                         <div className="images-container">
 
-                            {imageURLs.map((imageURL, index) => (
-                                <div key={index} className="image" style={{ backgroudImage: `url(${imageURL})` }}> </div>
+                            {imageURLs.map((imageURL) => (
+                                {imageURL}
+                                // <div key={index} className="image" style={{ backgroudImage: `url(${imageURL})` }}> </div>
                             ))}
                         </div>
                     </label>
